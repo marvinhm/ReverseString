@@ -1,10 +1,14 @@
 function reverseString(str) {
   let reversedString = "";
-  if(str === "a") {
-    reversedString = str;
-  } else if (str === "aa") {
-    reversedString = str;
+  if (typeof str === "string") {
+      let newString = [];
+      str.split('').forEach(element => {
+        newString.unshift(element);
+        reversedString = newString.join('');
+      });
   }
+
+
   return reversedString;
 }
 
